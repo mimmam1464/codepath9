@@ -57,4 +57,7 @@ Describe any challenges encountered while doing the work
 -Obtaining a session token via packet sniffing or another attack channel seems more likely to be achievable than establishing a session with a service and connecting the victim to that session and hoping the service does not have countermeasures.
 
 
+MOHAMMAD A IMMAM
+
+
 
