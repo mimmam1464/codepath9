@@ -1,5 +1,8 @@
 # Project 8 - Pentesting Live Targets
 
+### Project Stack and Significance
+Software Security Course Assignment
+
 Time spent: 4 hours spent in total
 
 > Objective: Identify vulnerabilities in three different versions of the Globitek website: blue, green, and red.
