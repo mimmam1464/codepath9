@@ -63,4 +63,82 @@ Describe any challenges encountered while doing the work
 MOHAMMAD A IMMAM
 
 
+---
+
+
+# Project 7 - WordPress Pentesting
+
+#Mohammad A Immam- github: mimmam1464
+
+Time spent: **5** hours spent in total
+
+> Objective: Find, analyze, recreate, and document **five vulnerabilities** affecting an old version of WordPress
+
+## Pentesting Report
+
+1. Username not Found on admin
+  - [ ] Summary: On the login page, when a user attempts to login with an incorrect password, the application mentions that the password for the account is incorrect or username not found. This exposes that the account exists and potential attackers can now only worry about password.
+    - Vulnerability types: exposure to the existence of username when not needed.
+    - Tested in version: latest
+    - Fixed in version: *
+    - [ ] Steps to recreate: Go to site, type in an existing username and an incorrect password.
+    - [ ] GIF: https://storage.googleapis.com/sdcismp1forms/useraccount.GIF
+    - [ ] Affected source code: https://core.trac.wordpress.org/browser/trunk/src/wp-login.php
+    - [Link 1](http://wpdistillery.vm/wp-login.php)
+2. IDOR open to public for uploads page
+  - [ ] Summary: user (with malicious intentions) can access the uploads directory without authorization
+    - Vulnerability types: Direct Access or Object Reference
+    - Tested in version: 4.2
+    - Fixed in version: ?
+  - [ ] GIF Walkthrough: https://storage.cloud.google.com/sdcismp1forms/idor.GIF?authuser=1 
+  - [ ] Steps to recreate: The link is open to all for viewing all uploaded content as a direct object reference.
+  - [ ] Affected source code:
+    - [Link 1](http://wpdistillery.vm/wp-content/uploads/2020/)
+3. Malicious Redirect to sites
+  - [ ] Summary: allows attackers to redirect users to random web sites and conduct phishing malformed URL
+    - Vulnerability types:Phishing
+    - Tested in version:4.2
+    - Fixed in version: 4.4.2
+    - CVE-2016-2221
+  - [ ] Steps to recreate: Use the inspect elements tool to add an a tag with an external link.
+4. Stored XSS by Theme File
+  - [ ] Summary: Downloading a theme from online, and renaming it to blank and packing it as a fake theme file allows achievement of an XSS attack whenever the user goes to the themes tab.
+    - Vulnerability types: XSS
+    - Tested in version: 4.2
+    - Fixed in version: 4.6.2
+  - [ ] Steps to recreate: Download the Theme file, keep index and css. Rename the theme to any scripting as desired. Change directory name to the same. Zip and upload the theme. Click on themes tab.
+  - [ ] Affected source code:
+    - [Link 1](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php)
+
+## Assets
+
+List any additional assets, such as scripts or files
+
+## Resources
+
+- [WordPress Source Browser](https://core.trac.wordpress.org/browser/)
+- [WordPress Developer Reference](https://developer.wordpress.org/reference/)
+
+GIFs created with [LiceCap](http://www.cockos.com/licecap/).
+
+## Notes
+
+Describe any challenges encountered while doing the work
+
+## License
+
+    Copyright 2020 Mohammad A Immam
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+
 
